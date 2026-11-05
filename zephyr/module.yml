@@ -1,0 +1,4 @@
+name: zephyr_uzlib
+build:
+  cmake: .
+  kconfig: Kconfig
