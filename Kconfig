@@ -1,1 +1,32 @@
 # SPDX-License-Identifier: Apache-2.0
+
+config UZLIB
+	bool "uzlib compression library"
+	help
+	  Enable uzlib using the upstream uzlib Git submodule.
+
+if UZLIB
+
+config UZLIB_COMPRESS
+	bool "Enable compression support"
+	default y
+
+config UZLIB_DECOMPRESS
+	bool "Enable decompression support"
+	default n
+
+config UZLIB_DEBUG_LOG
+	int "Debug log level"
+	default 0
+	help
+	  Debug logging level. Set to 0 to disable debug logging.
+
+config UZLIB_PARANOID_CHECKS
+	bool "Enable paranoid input checks"
+	default n
+
+config UZLIB_USE_MEMCPY
+	bool "Use memcpy for block copies"
+	default n
+
+endif # UZLIB
