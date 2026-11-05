@@ -34,6 +34,17 @@ Include `<uzlib.h>` to use the upstream API.
 For standalone Git checkouts,
 run `git submodule update --init --recursive` first.
 
+## Samples
+
+The round-trip sample compresses a message into gzip format,
+then decompresses it and verifies the restored bytes.
+Build and run it from a configured Zephyr workspace:
+
+```sh
+west build -b native_sim -d build/uzlib-roundtrip samples/roundtrip
+build/uzlib-roundtrip/zephyr/zephyr.exe
+```
+
 ## Tests
 
 From a configured Zephyr workspace,
