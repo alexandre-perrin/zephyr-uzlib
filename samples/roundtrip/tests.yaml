@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: Apache-2.0
+
+sample:
+  description: Compress and decompress a message with uzlib.
+  name: uzlib round trip
+common:
+  tags:
+    - compression
+    - uzlib
+  integration_platforms:
+    - native_sim
+  harness: console
+  harness_config:
+    type: one_line
+    regex:
+      - "uzlib round trip: .*"
+tests:
+  sample.modules.uzlib.roundtrip:
+    tags:
+      - modules
+      - uzlib
