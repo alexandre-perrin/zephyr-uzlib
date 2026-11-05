@@ -1,0 +1,8 @@
+tests:
+  modules.uzlib:
+    tags:
+      - modules
+      - uzlib
+    harness: ztest
+    integration_platforms:
+      - native_sim
