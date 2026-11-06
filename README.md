@@ -14,10 +14,10 @@ with submodule updates enabled:
 ```yaml
 manifest:
   projects:
-    - name: zephyr-uzlib
+    - name: uzlib
       url: https://github.com/alexandre-perrin/zephyr-uzlib
       revision: main
-      path: modules/lib/zephyr-uzlib
+      path: modules/lib/uzlib
       submodules: true
 ```
 
